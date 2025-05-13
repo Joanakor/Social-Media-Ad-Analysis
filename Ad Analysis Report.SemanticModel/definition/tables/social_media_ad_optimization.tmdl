@@ -26,11 +26,11 @@ table social_media_ad_optimization
 
 		annotation SummarizationSetBy = Automatic
 
-	column location
+	column country
 		dataType: string
 		lineageTag: 3bcfea82-e9c5-42a0-b8bf-54f9ab50ab2c
 		summarizeBy: none
-		sourceColumn: location
+		sourceColumn: country
 
 		annotation SummarizationSetBy = Automatic
 
@@ -144,9 +144,10 @@ table social_media_ad_optimization
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Promoted Headers", {{"engagement_score", type number}}, "en-US"),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Changed Type with Locale",{{"age", Int64.Type}, {"impressions", Int64.Type}, {"clicks", Int64.Type}}),
-				    #"Changed Type with Locale1" = Table.TransformColumnTypes(#"Changed Type", {{"time_spent_on_ad", type number}}, "en-US")
+				    #"Changed Type with Locale1" = Table.TransformColumnTypes(#"Changed Type", {{"time_spent_on_ad", type number}}, "en-US"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type with Locale1",{{"location", "country"}})
 				in
-				    #"Changed Type with Locale1"
+				    #"Renamed Columns"
 
 	annotation PBI_NavigationStepName = Navigation
 

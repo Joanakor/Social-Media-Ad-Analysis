@@ -402,7 +402,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "social_media_ad_optimization",
-			          "ConceptualProperty": "location"
+			          "ConceptualProperty": "country"
 			        }
 			      },
 			      "State": "Generated",
