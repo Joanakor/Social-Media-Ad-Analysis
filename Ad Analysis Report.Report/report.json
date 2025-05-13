@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -24,8 +24,47 @@
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
-      "name": "bc58243b06ea3d93a0ae",
+      "name": "730d0fc00931c0be69a8",
+      "ordinal": 1,
       "visualContainers": [],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Task",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "bc58243b06ea3d93a0ae",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3844ab94e214421ae415\",\"layouts\":[{\"id\":0,\"position\":{\"x\":842.505320963785,\"y\":0,\"z\":2000,\"width\":328.7501015451104,\"height\":444.54467172496715,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"social_media_ad_optimization.location\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"social_media_ad_optimization\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"location\"},\"Name\":\"social_media_ad_optimization.location\",\"NativeReferenceName\":\"Country\"}]},\"columnProperties\":{\"social_media_ad_optimization.location\":{\"displayName\":\"Country\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"29D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"29D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 444.54,
+          "width": 328.75,
+          "x": 842.51,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"795a5730b9c69529e786\",\"layouts\":[{\"id\":0,\"position\":{\"x\":513.7552194186745,\"y\":0,\"z\":1000,\"width\":328.7501015451104,\"height\":444.54467172496715,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"social_media_ad_optimization.ad_category\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"social_media_ad_optimization\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"ad_category\"},\"Name\":\"social_media_ad_optimization.ad_category\",\"NativeReferenceName\":\"Categories of ads\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"ad_category\"}}}]},\"columnProperties\":{\"social_media_ad_optimization.ad_category\":{\"displayName\":\"Categories of ads\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"29D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"29D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 444.54,
+          "width": 328.75,
+          "x": 513.76,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"b2a2f29900e298626a69\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.647776568262685,\"y\":0,\"z\":0,\"width\":421.9181465174089,\"height\":689.4435327950089,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Things I want to figure out about this data:\",\"textStyle\":{\"fontSize\":\"20pt\"}}]},{\"textRuns\":[{\"value\":\"Which ad category has the most conversions on Friday?\",\"textStyle\":{\"fontSize\":\"20pt\"}}],\"listType\":\"ordered\"},{\"textRuns\":[{\"value\":\"What is the average age of people clicking on Gadgets ads in India\",\"textStyle\":{\"fontSize\":\"20pt\"}}],\"listType\":\"ordered\"},{\"textRuns\":[{\"value\":\"What country has the biggest amount of conversions on ads?\",\"textStyle\":{\"fontSize\":\"20pt\"}}],\"listType\":\"ordered\"},{\"textRuns\":[{\"value\":\"What ad platform is the most used on Sundays with Apparel ads?\",\"textStyle\":{\"fontSize\":\"20pt\"}}],\"listType\":\"ordered\"},{\"textRuns\":[{\"value\":\"How many clicks did each country on Luggage ads?\",\"textStyle\":{\"fontSize\":\"20pt\"}}],\"listType\":\"ordered\"},{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 689.44,
+          "width": 421.92,
+          "x": 10.65,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
       "width": 1280.00
     }
   ]
