@@ -115,6 +115,9 @@ table social_media_ad_optimization
 		lineageTag: ccbccc49-527f-4819-ade3-cfefdc52411b
 		summarizeBy: none
 		sourceColumn: day_of_week
+		sortByColumn: day_of_week_number
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -136,6 +139,14 @@ table social_media_ad_optimization
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column day_of_week_number
+		dataType: string
+		lineageTag: 119d75b2-e05d-44d0-b6ab-5cc0aed8dccc
+		summarizeBy: none
+		sourceColumn: day_of_week_number
+
+		annotation SummarizationSetBy = Automatic
+
 	partition social_media_ad_optimization = m
 		mode: import
 		source =
@@ -145,9 +156,19 @@ table social_media_ad_optimization
 				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Promoted Headers", {{"engagement_score", type number}}, "en-US"),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Changed Type with Locale",{{"age", Int64.Type}, {"impressions", Int64.Type}, {"clicks", Int64.Type}}),
 				    #"Changed Type with Locale1" = Table.TransformColumnTypes(#"Changed Type", {{"time_spent_on_ad", type number}}, "en-US"),
-				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type with Locale1",{{"location", "country"}})
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type with Locale1",{{"location", "country"}}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Renamed Columns", "day_of_week", "day_of_week - Copy"),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Duplicated Column",{{"day_of_week - Copy", "day_of_week_number"}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns1","Monday","0",Replacer.ReplaceText,{"day_of_week_number"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","Tuesday","1",Replacer.ReplaceText,{"day_of_week_number"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","Wednesday","2",Replacer.ReplaceText,{"day_of_week_number"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","Thursday","3",Replacer.ReplaceText,{"day_of_week_number"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","Friday","4",Replacer.ReplaceText,{"day_of_week_number"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","Saturday","5",Replacer.ReplaceText,{"day_of_week_number"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","Sunday","6",Replacer.ReplaceText,{"day_of_week_number"}),
+				    #"Sorted Rows" = Table.Sort(#"Replaced Value6",{{"day_of_week_number", Order.Ascending}})
 				in
-				    #"Renamed Columns"
+				    #"Sorted Rows"
 
 	annotation PBI_NavigationStepName = Navigation
 
