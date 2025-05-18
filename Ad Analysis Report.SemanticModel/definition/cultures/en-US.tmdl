@@ -1722,9 +1722,75 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "social_media_ad_optimization.day_of_week_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "social_media_ad_optimization",
+			          "ConceptualProperty": "day_of_week_number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day of week number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day_of_week_number": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "day of week no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "social_media_ad_optimization_has_device_type": {
+			      "Binding": {
+			        "ConceptualEntity": "social_media_ad_optimization"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "social_media_ad_optimization": {
+			          "Target": {
+			            "Entity": "social_media_ad_optimization"
+			          }
+			        },
+			        "social_media_ad_optimization.device_type": {
+			          "Target": {
+			            "Entity": "social_media_ad_optimization.device_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "social_media_ad_optimization"
+			            },
+			            "Object": {
+			              "Role": "social_media_ad_optimization.device_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "social_media_ad_optimization_have_device_types"
+			        }
+			      ]
+			    },
 			    "social_media_ad_optimization_has_day_of_week": {
 			      "Binding": {
 			        "ConceptualEntity": "social_media_ad_optimization"
@@ -2372,39 +2438,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "social_media_ad_optimization_has_device_type": {
-			      "Binding": {
-			        "ConceptualEntity": "social_media_ad_optimization"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "social_media_ad_optimization": {
-			          "Target": {
-			            "Entity": "social_media_ad_optimization"
-			          }
-			        },
-			        "social_media_ad_optimization.device_type": {
-			          "Target": {
-			            "Entity": "social_media_ad_optimization.device_type"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "social_media_ad_optimization"
-			            },
-			            "Object": {
-			              "Role": "social_media_ad_optimization.device_type"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "social_media_ad_optimization_have_device_types"
-			        }
-			      ]
-			    },
 			    "social_media_ad_optimization_has_engagement_score": {
 			      "Binding": {
 			        "ConceptualEntity": "social_media_ad_optimization"
@@ -2435,6 +2468,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "social_media_ad_optimization_have_engagement_scores"
+			        }
+			      ]
+			    },
+			    "social_media_ad_optimization_has_day_of_week_number": {
+			      "Binding": {
+			        "ConceptualEntity": "social_media_ad_optimization"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "social_media_ad_optimization": {
+			          "Target": {
+			            "Entity": "social_media_ad_optimization"
+			          }
+			        },
+			        "social_media_ad_optimization.day_of_week_number": {
+			          "Target": {
+			            "Entity": "social_media_ad_optimization.day_of_week_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "social_media_ad_optimization"
+			            },
+			            "Object": {
+			              "Role": "social_media_ad_optimization.day_of_week_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "social_media_ad_optimization_have_day_of_week_number"
 			        }
 			      ]
 			    }
