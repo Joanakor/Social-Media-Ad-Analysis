@@ -1,0 +1,5 @@
+![alt text](https://github.com/Joanakor/Social-Media-Ad-Analysis/blob/main/Images/Ad%20Analysis%20Report_page-0001.jpg)
+![alt text](https://github.com/Joanakor/Social-Media-Ad-Analysis/blob/main/Images/Ad%20Analysis%20Report_page-0002.jpg)
+![alt text](https://github.com/Joanakor/Social-Media-Ad-Analysis/blob/main/Images/Ad%20Analysis%20Report_page-0003.jpg)
+![alt text](https://github.com/Joanakor/Social-Media-Ad-Analysis/blob/main/Images/Ad%20Analysis%20Report_page-0004.jpg)
+![alt text](https://github.com/Joanakor/Social-Media-Ad-Analysis/blob/main/Images/Ad%20Analysis%20Report_page-0005.jpg)
